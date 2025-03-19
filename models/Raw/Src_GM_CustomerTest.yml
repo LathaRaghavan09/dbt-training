@@ -3,10 +3,25 @@ version: 2
 models:
   - name: Customer
     columns:
-      - name: customerid 
+      - name: customerid
         tests:
           - unique
           - not_null
       - name: customername
         tests:
           - not_null
+      - name: SEGMENT
+        tests:
+          - accepted_values:
+              values:
+                - "Consumer"
+                - "Home Office"
+                - "Corporate"
+      - name: country
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "United States"
+                - "xyz"
+
