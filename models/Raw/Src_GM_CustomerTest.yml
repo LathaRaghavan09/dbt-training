@@ -4,10 +4,12 @@ models:
   - name: Customer
     columns:
       - name: customerid
+        description: Testing customerid is a primary key
         tests:
           - unique
           - not_null
       - name: customername
+        description: Testing customername is not-null
         tests:
           - not_null
       - name: SEGMENT
