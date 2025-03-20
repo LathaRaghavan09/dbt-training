@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: It is combined with 3 tables of Customer, Orders and Products
+    columns:
+      - name: orderid
+        description: It's a primary key of Orders Tables and Had duplicates in 1418 id
+      - name: shipmode
+        description: "{{ doc('Shipmode') }}"
+
